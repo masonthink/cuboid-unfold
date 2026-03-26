@@ -1,8 +1,6 @@
-# Cuboid Unfold / 长方体展开图
+# Cuboid Unfold -- Interactive 3D Unfolding Visualization
 
-An interactive 3D visualization that animates the unfolding of a rectangular prism (cuboid) into its flat net.
-
-![demo](https://img.shields.io/badge/demo-live-blue)
+An interactive 3D visualization that animates the unfolding of a rectangular prism (cuboid) into its flat net. Designed as an educational tool to help students understand solid geometry concepts.
 
 ## Features
 
@@ -12,50 +10,90 @@ An interactive 3D visualization that animates the unfolding of a rectangular pri
 - Surface area formula panel: `S = 2(ab + bc + ac)`
 - Orbit controls: drag to rotate, scroll to zoom, right-click to pan
 - Auto-play with fold/unfold cycling
-- Zero dependencies beyond Three.js (loaded via CDN)
-- Single HTML file, works offline
-
-## Usage
-
-Open `index.html` in any modern browser. No build step required.
-
-Or visit the live demo: [GitHub Pages](#) _(enable Pages in repo settings)_
-
-## Controls
-
-| Control | Action |
-|---------|--------|
-| **Unfold slider** | Manually control the fold/unfold progress |
-| **a / b / c sliders** | Adjust cuboid dimensions in real-time |
-| **Play button** | Auto-animate the unfolding cycle |
-| **Reset button** | Restore default dimensions and camera |
-| **Mouse drag** | Orbit camera around the model |
-| **Scroll wheel** | Zoom in/out |
-| **Right-click drag** | Pan the view |
+- Single HTML file, works offline -- no build step required
 
 ## Net Layout
 
 The cuboid unfolds into a cross-shaped net:
 
 ```
-         ┌───────┐
-         │  Top  │
-         │ a × b │
-┌────────┼───────┼────────┬───────┐
-│  Left  │ Front │ Right  │ Back  │
-│ b × c  │ a × c │ b × c  │ a × c │
-└────────┼───────┼────────┴───────┘
-         │Bottom │
-         │ a × b │
-         └───────┘
+         +-------+
+         |  Top  |
+         | a x b |
++--------+-------+--------+-------+
+|  Left  | Front | Right  | Back  |
+| b x c  | a x c | b x c  | a x c |
++--------+-------+--------+-------+
+         |Bottom |
+         | a x b |
+         +-------+
 ```
 
-## Tech
+## Tech Stack
 
-- [Three.js](https://threejs.org/) r162 for 3D rendering
-- Canvas API for dynamic face textures
-- Pure HTML/CSS/JS — no framework, no bundler
+- [Three.js](https://threejs.org/) r162 -- 3D rendering
+- Canvas API -- Dynamic face textures
+- Pure HTML / CSS / JS -- No framework, no bundler
+
+## Usage
+
+Open `index.html` in any modern browser. No installation required.
+
+## Status
+
+Complete -- Functional single-page application.
 
 ## License
+
+MIT
+
+---
+
+# Cuboid Unfold -- 长方体展开图交互式 3D 可视化
+
+长方体展开为平面展开图的交互式 3D 动画演示，帮助学生理解立体几何中的展开图概念。
+
+## 功能
+
+- 平滑的 3D 展开动画，速度可调
+- 实时调节尺寸参数（长 **a**、宽 **b**、高 **c**）
+- 每个面显示名称、尺寸公式和计算面积
+- 表面积公式面板：`S = 2(ab + bc + ac)`
+- 轨道控制：拖拽旋转、滚轮缩放、右键平移
+- 自动播放折叠/展开循环
+- 单 HTML 文件，离线可用，无需构建
+
+## 展开图布局
+
+长方体展开为十字形展开图：
+
+```
+         +-------+
+         |  顶面 |
+         | a x b |
++--------+-------+--------+-------+
+|  左面  |  前面 |  右面  |  后面 |
+| b x c  | a x c | b x c  | a x c |
++--------+-------+--------+-------+
+         |  底面 |
+         | a x b |
+         +-------+
+```
+
+## 技术栈
+
+- [Three.js](https://threejs.org/) r162 -- 3D 渲染
+- Canvas API -- 动态面纹理
+- 纯 HTML / CSS / JS -- 无框架、无打包工具
+
+## 使用方式
+
+在浏览器中打开 `index.html` 即可，无需安装。
+
+## 状态
+
+已完成 -- 可用的单页应用。
+
+## 许可证
 
 MIT
